@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.landingPage {
+  background-image: url('../assets/landindBG.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 640px;
+  text-align: center;
+  h2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    font-size: 55px;
+    color: white;
+  }
+}
+
+// ########################################### 404 ###########################################
+
+.error {
+  background-image: url('../assets/404BG.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 640px;
+  .Container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @media screen and (max-width: 700px) {
+      position: relative;
+      top: 50%;
+    }
+
+    img {
+      z-index: 0;
+      width: 400px;
+      height: 400px;
+      animation: jump 4s linear infinite;
+      @media screen and (max-width: 700px) {
+        width: 300px;
+        height: 300px;
+      }
+      @media screen and (max-width: 280px) {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        top: 50%;
+      }
+    }
+  }
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-80px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .text {
+    display: flex;
+    width: auto;
+    justify-content: right;
+    margin-top: 15px;
+    color: white;
+    z-index: 1;
+    @media screen and (max-width: 786px) {
+      display: none;
+    }
+    .verticalLine {
+      border: 1px white solid;
+      height: 80px;
+      border-radius: 10px;
+    }
+    .details {
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: center;
+      width: 200px;
+      span {
+        color: rgb(182, 182, 182);
+        margin-top: 3px;
+      }
+      h4 {
+        font-size: 27px;
+        font-weight: lighter;
+      }
+      a {
+        text-decoration: none;
+        border: 1px #090088 solid;
+        border-radius: 50px;
+        color: white;
+        padding: 5px;
+        &:hover {
+          background-color: #090088;
+          border: 1px white solid;
+        }
+      }
+    }
+  }
+  .responsiveMsg {
+    @media screen and (max-width: 1440px) {
+      display: none;
+    }
+    @media screen and (max-width: 786px) {
+      display: block;
+      position: relative;
+      text-align: center;
+      h5 {
+        color: white;
+      }
+      a {
+        border: none;
+        background-color: #090088;
+        color: white;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+// ########################################### nav ###########################################
+.navElements {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px gray solid;
+  h3 {
+    margin-top: 10px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    text-transform: capitalize;
+  }
+}
